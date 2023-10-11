@@ -3,10 +3,10 @@
 
 class AppDevice
 {
-    public $ram;
-    public $inch;
-    public $space;
-    public $color;
+    public $ram='1GB';
+    public $inch='4inch';
+    public $space='16GB';
+    public $color='Silver';
 
 
 }
