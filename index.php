@@ -8,7 +8,8 @@ class AppDevice
     public $space='16GB';
     public $color='Silver';
     public $ownerName;
-    const OWNERNAME=5;
+    //const OWNERNAME=5;
+    private $lock;
 
 
     /*
@@ -28,11 +29,17 @@ class AppDevice
         $this->space=$s;
         $this->color=$c;
     }
+
+    public function changeLock($l){
+        $this->lock= sha1($l);
+    }
+
 }
 
 $iphone6plus=new AppDevice();
 
 $iphone6plus->changeSpace('2GB','5 Inch','32GB','Gold');
+$iphone6plus->changeLock('hala123');
 /*
 $iphone6plus->ram='2GB';
 $iphone6plus->inch='5 inch';
