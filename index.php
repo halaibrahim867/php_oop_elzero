@@ -7,14 +7,14 @@ class AppDevice
     public $inch='4inch';
     public $space='16GB';
     public $color='Silver';
-
     public $ownerName;
+    const OWNERNAME=5;
 
 
-    public function setOwnerName($owner){
+    public function setOwnerName(){
 
-        if(strlen($owner) < 3){
-            echo 'Owner Name cannot be less thane 3 characters';
+        if(strlen($this->ownerName) < self::OWNERNAME){
+            echo 'Owner Name cannot be less thane'. self::OWNERNAME .'characters';
         }else{
             echo 'Your Name has been set';
         }
@@ -27,8 +27,16 @@ $iphone6plus->ram='2GB';
 $iphone6plus->inch='5 inch';
 $iphone6plus->space='32GB';
 $iphone6plus->color='Gold';
+$iphone6plus->ownerName='hi';
+$iphone6plus->setOwnerName();
 
-$iphone6plus->setOwnerName('hala');
+//to print const
+
+echo '<br>';
+echo AppDevice::OWNERNAME;
+echo '<br>';
+
+echo $iphone6plus::OWNERNAME;
 
 
 echo '<pre>';
