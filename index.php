@@ -36,6 +36,10 @@ class AppDevice
 
 }
 
+class Sony extends AppDevice
+{
+    public $camera='25MB';
+}
 $iphone6plus=new AppDevice();
 
 $iphone6plus->changeSpace('2GB','5 Inch','32GB','Gold');
@@ -75,4 +79,8 @@ echo '<pre>';
 var_dump($iphone7plus);
 echo  '</pre>';
 
+$sony=new Sony();
+echo '<pre>';
+var_dump($sony);
+echo  '</pre>';
 
