@@ -34,7 +34,7 @@ class AppDevice
     public function changeLock($l){
         $this->lock= sha1($l);
     }
-    public function sayHello($n){
+   final public function sayHello($n){
         $this->name=$n;
         echo 'Welcome To: '.$n.'<br>';
     }
@@ -44,10 +44,7 @@ class AppDevice
 class Sony extends AppDevice
 {
     public $camera='25MB';
-    public function sayHello($n){
-        $this->name=$n;
-        echo 'Welcome To: '.$n.' This Phone Has ' . $this->ram. ' Ram'.'<br>';
-    }
+
 
 }
 /*
