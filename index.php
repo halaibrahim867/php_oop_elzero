@@ -8,9 +8,16 @@ class AppDevice
     public $space='16GB';
     public $color='Silver';
 
+    public $ownerName;
 
-    public function doubleHomePressed(){
-        echo 'You have pressed the Home Button Twice';
+
+    public function setOwnerName($owner){
+
+        if(strlen($owner) < 3){
+            echo 'Owner Name cannot be less thane 3 characters';
+        }else{
+            echo 'Your Name has been set';
+        }
     }
 }
 
@@ -20,7 +27,8 @@ $iphone6plus->ram='2GB';
 $iphone6plus->inch='5 inch';
 $iphone6plus->space='32GB';
 $iphone6plus->color='Gold';
-$iphone6plus->doubleHomePressed();
+
+$iphone6plus->setOwnerName('hala');
 
 
 echo '<pre>';
