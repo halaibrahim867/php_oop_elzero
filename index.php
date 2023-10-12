@@ -1,8 +1,25 @@
 <?php
 
 
-class AppDevice
+abstract class MakeDevice{
+    public $ram;
+
+    public function sayHello()
+    {
+
+    }
+
+    abstract public function sayBye();
+
+}
+class AppDevice extends MakeDevice
 {
+    public function sayBye()
+    {
+        echo 'Say Bye';
+    }
+
+    /*
     public $ram='1GB';
     public $inch='4inch';
     public $space='16GB';
@@ -11,7 +28,7 @@ class AppDevice
     //const OWNERNAME=5;
     private $lock;
     public $name;
-
+    */
 
     /*
     public function setOwnerName(){
@@ -23,6 +40,7 @@ class AppDevice
         }
     }*/
 
+    /*
     public function changeSpace($r,$in,$s, $c)
     {
         $this->ram=$r;
@@ -38,15 +56,18 @@ class AppDevice
         $this->name=$n;
         echo 'Welcome To: '.$n.'<br>';
     }
-
+    */
 }
 
+/*
 class Sony extends AppDevice
 {
     public $camera='25MB';
 
 
 }
+
+*/
 /*
 $iphone6plus=new AppDevice();
 
@@ -74,6 +95,7 @@ echo '<pre>';
 var_dump($iphone6plus);
 echo  '</pre>';
 */
+/*
 $iphone7plus=new AppDevice();
 $iphone7plus->changeSpace('4GB','7 Inch','128GB','Silver');
 $iphone7plus->sayHello('iPhone7');
@@ -82,7 +104,7 @@ $iphone7plus->ram='4GB';
 $iphone7plus->inch='6inch';
 $iphone7plus->space='256GB';
 $iphone7plus->color='Silver';
-*/
+
 echo '<pre>';
 print_r($iphone7plus);
 echo  '</pre>';
@@ -93,4 +115,7 @@ $sony->sayHello('Sony');
 echo '<pre>';
 print_r($sony);
 echo  '</pre>';
+*/
 
+$app=new AppDevice();
+echo '<pre>' ; print_r($app); echo '</pre>';
