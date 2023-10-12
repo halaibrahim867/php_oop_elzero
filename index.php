@@ -9,16 +9,28 @@ abstract class MakeDevice{
 
     }
 
-    abstract public function sayBye();
+    abstract public function testPerformance();
+    abstract public function verifyOwner();
+    abstract public function sayWelcome($n);
 
 }
 class AppDevice extends MakeDevice
 {
-    public function sayBye()
+    public $owner;
+    public function testPerformance()
     {
-        echo 'Say Bye';
+        echo 'Performance is Good 100%';
+    }
+    public function verifyOwner()
+    {
+        echo 'Owner is verified';
     }
 
+   public function sayWelcome($s)
+   {
+       $this->owner=$s;
+       echo 'Welcome '. $s ;
+   }
     /*
     public $ram='1GB';
     public $inch='4inch';
@@ -118,4 +130,5 @@ echo  '</pre>';
 */
 
 $app=new AppDevice();
+$app->sayWelcome('hala');
 echo '<pre>' ; print_r($app); echo '</pre>';
